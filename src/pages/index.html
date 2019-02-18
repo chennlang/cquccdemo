@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta name="format-detection" content="telephone=no,email=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../static/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/cqucc.css"/>
+    <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+		<title>重庆大学党委教师工作部</title>
+	</head>
+	<style type="text/css">
+	</style>
+	<body>
+		<div class="cq-page">
+      <div class="r-side">
+        <div class="logo">
+          <img src="../static/images/logo.jpg" alt="">
+        </div>
+        <div class="main-emun">
+          <ul class="main-emun-wrap">
+            <li class="__list">
+                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
+                11111111
+            </li>            
+            <li class="__list">
+                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
+                222222
+            </li>            
+            <li class="__list">
+                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
+                333333
+            </li>            
+            <li class="__list">
+                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
+                444444
+            </li>            
+          </ul>
+        </div>
+      </div>
+			<div class="header">
+				<span class="logo">
+					<img class="__img" src="../static/images/logo.jpg" alt="logo">
+				</span>
+				<span class="menu-btn">
+					<img class="__img" src="../static/images/ico-nav.jpg" alt="emun-btn">
+				</span>
+      </div>
+			<div class="banner">
+				
+			</div>
+			<div class="nav">
+				<ul class="nav-wrap">
+					<li class="__nav-item active-nav">新闻资讯</li>
+					<li class="__nav-item">部门动态</li>
+					<li class="__nav-item">教工系统</li>
+					<li class="__nav-item">学生动态</li>
+					<li class="__nav-item">下载专区</li>
+				</ul>
+			</div>
+			<div class="news-content">
+        <!-- cont1 -->
+				<ul class="news-wrap">
+					<li class="news-list">
+            <div class="__lf">
+              
+            </div>
+            <div class="__rt"></div>
+          </li>
+        </ul>
+        <!-- cont2 -->
+        <ul class="news-wrap">
+            <li class="news-list">
+              <div class="__lf">
+                
+              </div>
+              <div class="__rt"></div>
+            </li>
+        </ul>
+        <!-- cont3 -->
+        <ul class="news-wrap">
+            <li class="news-list">
+              <div class="__lf">
+            
+              </div>
+              <div class="__rt"></div>
+            </li>
+        </ul>
+        <!-- cont4 -->
+        <ul class="news-wrap">
+            <li class="news-list">
+              <div class="__lf">
+                
+              </div>
+              <div class="__rt"></div>
+            </li>
+        </ul>
+      </div>
+
+      <div class="footer">
+        <p>重庆大学党委教师工作部主办&nbsp;&nbsp;&nbsp;&nbsp;版权所有 </p>
+        <p class="id">渝ICP备15007027号-4</p>
+      </div>
+		</div>
+	</body>
+  <script src="../static/js/flex.js"></script>
+  <script>
+    $('.nav-wrap .__nav-item').click(function(){
+      var index = $(this).index();
+      var TX = index*100
+      var translateX = 'translateX(-'+TX+'%)';
+      $(this).addClass('active-nav').siblings().removeClass('active-nav');
+      $('.news-content').css({'transform': translateX});
+    });
+    $('.cq-page .header .menu-btn').click(function(e){
+      e.stopPropagation();
+      $('.r-side').css({'transform':'translateX(0)'});
+    })
+    $('body').click(function(){
+      $('.r-side').css({'transform':'translateX(5.4rem)'});
+    })
+    $('.r-side').click(function(e){
+      e.stopPropagation();
+    })
+  </script>
+</html>
