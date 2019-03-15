@@ -62,7 +62,7 @@ gulp.task('css-move', function () {
         .pipe(connect.reload())      
 });
 
-gulp.task('less', function () {                   // 创建gulp任务
+gulp.task('allLess', function () {                   // 创建gulp任务
 	// 加入处理的插件
 	var processors = [
       autoprefixer({browsers: ['last 20 versions','Android >= 4.0','> 5%','ie >8']}),
@@ -120,6 +120,6 @@ gulp.task('webserver', function() {
         port: 3333
     });
 });
-gulp.task('update',['less', 'allJs', 'allPages', 'fonts', 'images','css-move'])
+gulp.task('update',['allLess', 'allJs', 'allPages', 'fonts', 'images','css-move'])
 
-gulp.task('default',['webserver', 'less', 'allJs', 'allPages', 'fonts', 'images', 'watch','css-move'])
+gulp.task('default',['allLess', 'allJs', 'allPages', 'fonts', 'images', 'watch','css-move','webserver'])

@@ -10,142 +10,263 @@
     <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
 		<title>重庆大学党委教师工作部</title>
 	</head>
-	<style type="text/css">
+  <style type="text/css">
+    .cq-page .__img-news .__lf{
+      width: calc( 97% - 3rem);
+    }
 	</style>
 	<body>
 		<div class="cq-page">
-      <div class="r-side">
+      <!-- <div class="r-side">
         <div class="logo">
-          <img src="../static/images/logo.jpg" alt="">
+          <img src="../static/images/logo.jpg" alt="logo">
         </div>
         <div class="main-emun">
           <ul class="main-emun-wrap">
             <li class="__list">
                 <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
-                首页
+                11111111
             </li>            
             <li class="__list">
-                <span class="__icon"><img src="../static/images/sz.png" alt="home"> </span>
-                理论学习
+                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
+                222222
             </li>            
             <li class="__list">
-                <span class="__icon"><img src="../static/images/sz.png" alt="home"> </span>
-                教工风采
+                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
+                333333
             </li>            
             <li class="__list">
-                <span class="__icon"><img src="../static/images/dw.png" alt="home"> </span>
-                主题活动
-            </li>    
-            <li class="__list">
-              <span class="__icon"><img src="../static/images/jl.png" alt="home"> </span>
-                下载专区
-            </li>
-            <li class="__list">
-              <span class="__icon"><img src="../static/images/zs.png" alt="home"> </span>
-                视屏图片
-            </li>
-            <li class="__list">
-              <span class="__icon"><img src="../static/images/dw.png" alt="home"> </span>
-                网上调查
-            </li>        
+                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
+                444444
+            </li>            
           </ul>
         </div>
-      </div>
+      </div> -->
 			<div class="header">
 				<span class="logo">
-					<img class="__img" src="../static/images/logo.jpg" alt="logo">
+					<img class="__img" src="../static/images/logo.png" alt="logo">
 				</span>
-				<span class="menu-btn">
-					<img class="__img" src="../static/images/ico-nav.jpg" alt="emun-btn">
+				<span class="search-btn">
+					<img class="__img" src="../static/images/search-btn.png" alt="search-btn">
 				</span>
       </div>
-			<div class="banner">
+			<div class="banner" id="banner">
 				
 			</div>
-			<div class="nav">
+			<div class="nav" id="nav">
 				<ul class="nav-wrap">
-					<li class="__nav-item active-nav">新闻资讯</li>
-					<li class="__nav-item">部门动态</li>
-					<li class="__nav-item">教工系统</li>
-					<li class="__nav-item">学生动态</li>
-					<li class="__nav-item">下载专区</li>
+					<li class="__nav-item active-nav">首页推荐</li>
+					<li class="__nav-item">通知公告</li>
+					<li class="__nav-item">校内新闻</li>
+          <li class="__nav-item">爱国奋斗</li>
+          <li class="__nav-item">建功立业</li>
+          <li class="__nav-item">教师风采</li>
+          <li class="__nav-item">机构设置</li>
+          <li class="__nav-item">师德建设</li>
+          <li class="__nav-item">学习动态</li>
+          <li class="__nav-item">学习资料</li>
+          <li class="__nav-item">学习简报</li>
+          <li class="__nav-item">荣誉榜单</li>
+          <li class="__nav-item">党员楷模</li>
+          <li class="__nav-item">文化传承</li>
+          <li class="__nav-item">懋德讲坛</li>
+          <li class="__nav-item">师德涵养</li>
+          <li class="__nav-item">制定文件</li>
+          <li class="__nav-item">相关表格</li>
+          <li class="__nav-item">其他下载</li>
+          <span id="showAllTab" class="__show-all"><img class="ui-img" src="../static/images/show-more.png" alt=""> </span>
 				</ul>
 			</div>
 			<div class="news-content">
         <!-- cont1 -->
 				<ul class="news-wrap">
-					<li class="news-list">
+          <!-- 文字 -->
+					<li class="news-list __text-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动——川剧工作坊折子戏专场演出 </h3>
+            <p class="__info">
+              <span class="view-nums">2次观看</span>
+              <span class="creat-time">2018.02.10</span>
+            </p>
+          </li>
+          <!-- 图片 -->
+          <li class="news-list __img-news">
             <div class="__lf">
-              <img src="http://jgb.bronpote.com/images/nopic.jpg" alt="baseimg">
+              <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动</h3>
+              <p class="__info">
+                <span class="view-nums">2次观看</span>
+                <span class="creat-time">2018.02.10</span>
+              </p>
             </div>
-            <div class="__rt">
-              <p class="title">蒋兴良：做科研要耐得住寂寞和考验</p>
-              <p class="time"><img class="icon-t" src="../static/images/t.png" alt=""> 2019-07-05 &nbsp;&nbsp;<img class="icon-v" src="../static/images/c.png" alt="view">7</p>
+            <div class="__rt"></div>
+          </li>
+          <!-- 视频 -->
+          <li class="news-list __video-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动</h3>
+            <div class="__video-img">
+              <img class=ui-video-img" src="" alt="">
+              <div class="ui-paly">
+                <img  src="../static/images/video-play.png" alt="play">
+              </div>
             </div>
           </li>
+           <!-- 视频 -->
+           <li class="news-list __video-news">
+              <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动</h3>
+              <div class="__video-img">
+                <img class=ui-video-img" src="" alt="">
+                <div class="ui-paly">
+                  <img  src="../static/images/video-play.png" alt="play">
+                </div>
+              </div>
+            </li>
         </ul>
         <!-- cont2 -->
-        <ul class="news-wrap">
-          <li class="news-list">
-            <div class="__lf">
-              <img src="http://jgb.bronpote.com/images/nopic.jpg" alt="baseimg">
-            </div>
-            <div class="__rt">
-              <p class="title">蒋兴良：做科研要耐得住寂寞和考验</p>
-              <p class="time"><img class="icon-t" src="../static/images/t.png" alt=""> 2019-07-05 &nbsp;&nbsp;<img class="icon-v" src="../static/images/c.png" alt="view">7</p>
-            </div>
-          </li>
-        </ul>
-        <!-- cont3 -->
-        <ul class="news-wrap">
-          <li class="news-list">
-            <div class="__lf">
-              <img src="http://jgb.bronpote.com/images/nopic.jpg" alt="baseimg">
-            </div>
-            <div class="__rt">
-              <p class="title">蒋兴良：做科研要耐得住寂寞和考验</p>
-              <p class="time"><img class="icon-t" src="../static/images/t.png" alt=""> 2019-07-05 &nbsp;&nbsp;<img class="icon-v" src="../static/images/c.png" alt="view">7</p>
-            </div>
-          </li>
-        </ul>
-        <!-- cont4 -->
-        <ul class="news-wrap">
-          <li class="news-list">
-            <div class="__lf">
-              <img src="http://jgb.bronpote.com/images/nopic.jpg" alt="baseimg">
-            </div>
-            <div class="__rt">
-              <p class="title">蒋兴良：做科研要耐得住寂寞和考验</p>
-              <p class="time"><img class="icon-t" src="../static/images/t.png" alt=""> 2019-07-05 &nbsp;&nbsp;<img class="icon-v" src="../static/images/c.png" alt="view">7</p>
-            </div>
-          </li>
+        <ul class="news-wrap">1111111</ul>
+        <ul class="news-wrap">222</ul>
+        <ul class="news-wrap">111323231111</ul>
+        <ul class="news-wrap">1111111</ul>
+        <ul class="news-wrap">113232311111</ul>
+        <ul class="news-wrap">1111111</ul>
+        <ul class="news-wrap">11123232321111</ul>
+        <ul class="news-wrap">1113221111</ul>
+        <ul class="news-wrap">1111111</ul>
+        <ul class="news-wrap">1133211111</ul>
+        <ul class="news-wrap">11332213231111</ul>
+        <ul class="news-wrap">1111232111</ul>
+        <ul class="news-wrap">11112111</ul>
+        <ul class="news-wrap">11113232111</ul>
+        <ul class="news-wrap">11113232111</ul>
+        <ul class="news-wrap">1111111</ul>
+      </div>
+      <div class="links">
+        <h3 class="__title">友情链接</h3>
+        <ul class="link-block">
+          <li class="link-item">虎溪首页</li>
+          <li class="link-item">人事处</li>
+          <li class="link-item">教务处</li>
+          <li class="link-item">纪委办</li>
+          <li class="link-item">学工部</li>
         </ul>
       </div>
-
+      <div class="QR-code">
+        <div class="__item">
+          <div class="__ui-img"></div>
+          <p class="__ui-des">教工部微博</p>
+        </div>
+        <div class="__item">
+          <div class="__ui-img"></div>
+          <p class="__ui-des">重大教师公众号</p>
+        </div>
+        <div class="__item">
+          <div class="__ui-img"></div>
+          <p class="__ui-des">学校门户站</p>
+        </div>
+        <div class="__item">
+          <div class="__ui-img"></div>
+          <p class="__ui-des">教工部手机部</p>
+        </div>
+      </div>
       <div class="footer">
-        <p>重庆大学党委教师工作部主办&nbsp;&nbsp;&nbsp;&nbsp;版权所有 </p>
-        <p class="id">渝ICP备15007027号-4</p>
+        <p>重庆大学 版权所有2012</p>
+        <p class="id">地址：重庆市沙坪坝区沙正街174号-4</p>
+        <p>邮编400044-4</p>
       </div>
-		</div>
+    <!-- 遮罩层 -->
+    <div class="fix hide"></div>
+      <!-- 显示所有标签弹窗 -->
+    <div class="all-tab-content">
+      <div class="main-content">
+        <ul class="__wrap">
+          <li class="__item tab-this">首页推荐</li>
+          <li class="__item">通知公告</li>
+          <li class="__item">校内新闻</li>
+          <li class="__item">爱国奋斗</li>
+          <li class="__item">建功立业</li>
+          <li class="__item">教师风采</li>
+          <li class="__item">机构设置</li>
+          <li class="__item">师德建设</li>
+          <li class="__item">学习动态</li>
+          <li class="__item">学习资料</li>
+          <li class="__item">学习简报</li>
+          <li class="__item">荣誉榜单</li>
+          <li class="__item">党员楷模</li>
+          <li class="__item">文化传承</li>
+          <li class="__item">懋德讲坛</li>
+          <li class="__item">师德涵养</li>
+          <li class="__item">制定文件</li>
+          <li class="__item">相关表格</li>
+          <li class="__item">其他下载</li>
+        </ul>
+      </div>
+      <div class="close-btn">关闭</div>
+    </div>
+    </div>
 	</body>
   <script src="../static/js/flex.js"></script>
   <script>
+    var tabIndex = 0;
+    var renderNavStyle = function(type){
+      var TX = -tabIndex*100
+      var type = type || 0;
+      var translateX = 'translateX(-'+TX+'%)';
+      var translate3d = 'translate3d('+TX+'%,0px,0px)';
+      var itemWidth = $('#nav .nav-wrap .__nav-item').first().width()
+      $('.nav-wrap .__nav-item').eq(tabIndex).addClass('active-nav').siblings().removeClass('active-nav');
+      $('.news-content').css({'transform':translate3d});
+      if(type===1 && tabIndex>=4){
+        $("#nav .nav-wrap").scrollLeft((tabIndex-2)*itemWidth);
+      }else{
+        $("#nav .nav-wrap").scrollLeft(0);
+      }
+      $('.all-tab-content .__item').eq(tabIndex).addClass('tab-this').siblings().removeClass('tab-this')
+
+    }
+    // 点击nav切换content
     $('.nav-wrap .__nav-item').click(function(){
       var index = $(this).index();
-      var TX = index*100
-      var translateX = 'translateX(-'+TX+'%)';
-      $(this).addClass('active-nav').siblings().removeClass('active-nav');
-      $('.news-content').css({'transform': translateX});
+      tabIndex = index;
+      renderNavStyle();
+      // var TX = index*100
+      // var translateX = 'translateX(-'+TX+'%)';
+      // $(this).addClass('active-nav').siblings().removeClass('active-nav');
+      // $('.news-content').css({'transform': translateX});
     });
-    $('.cq-page .header .menu-btn').click(function(e){
-      e.stopPropagation();
-      $('.r-side').css({'transform':'translateX(0)'});
+    // 显示所有标签
+    $('#showAllTab').on('click',function(){
+      $('.all-tab-content').css('margin-top','2.854rem')
+      $('.all-tab-content').height('10.48rem')
     })
-    $('body').click(function(){
-      $('.r-side').css({'transform':'translateX(5.4rem)'});
+    // 关闭
+    $('.all-tab-content .close-btn').on('click',function(){
+      $('.all-tab-content').css('margin-top','0rem')
+      $('.all-tab-content').height('0rem')
     })
-    $('.r-side').click(function(e){
-      e.stopPropagation();
+    // 选择弹窗tab标签
+    $('.all-tab-content .__item').on('click',function(){
+      var index = $(this).index()
+      tabIndex = index;
+      renderNavStyle(1);
+      // var itemWidth = $('#nav .nav-wrap .__nav-item').first().width()
+      // console.log(index*itemWidth)
+      // $("#nav .nav-wrap").scrollLeft(index*itemWidth);
+      // $(this).addClass('tab-this').siblings().removeClass('tab-this')
+      $('.all-tab-content').css('margin-top','0rem')
+      $('.all-tab-content').height('0rem')
+    })
+    // 滚动浮动nav
+    $(window).scroll(function(){
+      var top = $(document).scrollTop();
+      var bannerTop = $('#banner').offset().top + 72
+      if(top>bannerTop){
+        if(!$('.cq-page').hasClass('nav-flex')){
+        $('.cq-page').addClass('nav-flex')
+        }
+      }
+      if(top<=82){
+        if($('.cq-page').hasClass('nav-flex')){
+          $('.cq-page').removeClass('nav-flex')
+        }
+      }
     })
   </script>
 </html>
