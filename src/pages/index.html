@@ -46,7 +46,7 @@
 				<span class="logo">
 					<img class="__img" src="../static/images/logo.png" alt="logo">
 				</span>
-				<span class="search-btn">
+				<span id="search-btn" class="search-btn">
 					<img class="__img" src="../static/images/search-btn.png" alt="search-btn">
 				</span>
       </div>
@@ -173,7 +173,7 @@
       </div>
     <!-- 遮罩层 -->
     <div class="fix hide"></div>
-      <!-- 显示所有标签弹窗 -->
+      <!-- 所有标签弹窗 -->
     <div class="all-tab-content">
       <div class="main-content">
         <ul class="__wrap">
@@ -200,6 +200,17 @@
       </div>
       <div class="close-btn">关闭</div>
     </div>
+    <!-- 搜索栏 -->
+    <div class="search-bar hide">
+      <span class="__go-back">
+        <img src="../static/images/goBack.png" alt="back">
+      </span>
+      <span class="__input">
+        <img class="icon-input" src="../static/images/search.png" alt="search">
+        <input type="search" name="search-text" placeholder="重庆大学川剧">
+      </span>
+      <span class="__btn">搜索</span>
+    </div>
     </div>
 	</body>
   <script src="../static/js/flex.js"></script>
@@ -211,6 +222,7 @@
       var translateX = 'translateX(-'+TX+'%)';
       var translate3d = 'translate3d('+TX+'%,0px,0px)';
       var itemWidth = $('#nav .nav-wrap .__nav-item').first().width()
+      $('.fix').addClass('hide')
       $('.nav-wrap .__nav-item').eq(tabIndex).addClass('active-nav').siblings().removeClass('active-nav');
       $('.news-content').css({'transform':translate3d});
       if(type===1 && tabIndex>=4){
@@ -233,11 +245,13 @@
     });
     // 显示所有标签
     $('#showAllTab').on('click',function(){
+      $('.fix').removeClass('hide')
       $('.all-tab-content').css('margin-top','2.854rem')
       $('.all-tab-content').height('10.48rem')
     })
     // 关闭
     $('.all-tab-content .close-btn').on('click',function(){
+      $('.fix').addClass('hide')
       $('.all-tab-content').css('margin-top','0rem')
       $('.all-tab-content').height('0rem')
     })
@@ -253,16 +267,31 @@
       $('.all-tab-content').css('margin-top','0rem')
       $('.all-tab-content').height('0rem')
     })
+    // 搜索
+    $('#search-btn').on('click',function(){
+      $('.search-bar').removeClass('hide')
+      $('.fix').removeClass('hide')
+      $('.search-bar .__input input[type=search]').focus()
+    })
+    // 关闭搜索
+    $('.search-bar .__go-back').on('click', function(){
+      $('.search-bar').addClass('hide')
+      $('.fix').addClass('hide')
+    })
     // 滚动浮动nav
+    var flag = true
     $(window).scroll(function(){
       var top = $(document).scrollTop();
       var bannerTop = $('#banner').offset().top + 72
-      if(top>bannerTop){
+      console.log(bannerTop)
+      if(top>bannerTop && flag){
+        flag = !flag;
         if(!$('.cq-page').hasClass('nav-flex')){
         $('.cq-page').addClass('nav-flex')
         }
       }
-      if(top<=82){
+      if(top<=82 && !flag){
+        flag = !flag;
         if($('.cq-page').hasClass('nav-flex')){
           $('.cq-page').removeClass('nav-flex')
         }
