@@ -282,19 +282,23 @@
     var flag = true
     $(window).scroll(function(){
       var top = $(document).scrollTop();
-      var bannerTop = $('#banner').offset().top + 72
-      console.log(bannerTop)
-      if(top>bannerTop && flag){
-        flag = !flag;
+      var headHeight = $('.header').height()
+      var navHeight = $('#nav').height() + headHeight + 2
+      // var bannerTop = $('#banner').offset().top + 72
+      var newsTop = $('.news-content').offset().top
+      if(flag && top>newsTop - navHeight) {
+        console.log('aaa') 
         if(!$('.cq-page').hasClass('nav-flex')){
         $('.cq-page').addClass('nav-flex')
         }
-      }
-      if(top<=82 && !flag){
         flag = !flag;
+      }
+      if(!flag && top<newsTop - navHeight){
+        console.log('bbbb')
         if($('.cq-page').hasClass('nav-flex')){
           $('.cq-page').removeClass('nav-flex')
         }
+        flag = !flag;
       }
     })
   </script>
