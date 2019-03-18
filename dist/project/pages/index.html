@@ -103,7 +103,7 @@
           <li class="news-list __video-news">
             <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动</h3>
             <div class="__video-img">
-              <img class=ui-video-img" src="" alt="">
+              <img class="ui-video-img" src="" alt="">
               <div class="ui-paly">
                 <img  src="../static/images/video-play.png" alt="play">
               </div>
@@ -113,7 +113,7 @@
            <li class="news-list __video-news">
               <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动</h3>
               <div class="__video-img">
-                <img class=ui-video-img" src="" alt="">
+                <img class="ui-video-img" src="" alt="">
                 <div class="ui-paly">
                   <img  src="../static/images/video-play.png" alt="play">
                 </div>
@@ -121,7 +121,32 @@
             </li>
         </ul>
         <!-- cont2 -->
-        <ul class="news-wrap">1111111</ul>
+        <ul class="news-wrap">
+          <!-- 文字 -->
+					<li class="news-list __text-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动——川剧工作坊折子戏专场演出 </h3>
+            <p class="__info">
+              <span class="view-nums">2次观看</span>
+              <span class="creat-time">2018.02.10</span>
+            </p>
+          </li>
+          <!-- 文字 -->
+					<li class="news-list __text-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动——川剧工作坊折子戏专场演出 </h3>
+            <p class="__info">
+              <span class="view-nums">2次观看</span>
+              <span class="creat-time">2018.02.10</span>
+            </p>
+          </li>
+          <!-- 文字 -->
+					<li class="news-list __text-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动——川剧工作坊折子戏专场演出 </h3>
+            <p class="__info">
+              <span class="view-nums">2次观看</span>
+              <span class="creat-time">2018.02.10</span>
+            </p>
+          </li>
+        </ul>
         <ul class="news-wrap">222</ul>
         <ul class="news-wrap">111323231111</ul>
         <ul class="news-wrap">1111111</ul>
@@ -222,6 +247,7 @@
       var translateX = 'translateX(-'+TX+'%)';
       var translate3d = 'translate3d('+TX+'%,0px,0px)';
       var itemWidth = $('#nav .nav-wrap .__nav-item').first().width()
+      var newsContentHeight = 0
       $('.fix').addClass('hide')
       $('.nav-wrap .__nav-item').eq(tabIndex).addClass('active-nav').siblings().removeClass('active-nav');
       $('.news-content').css({'transform':translate3d});
@@ -231,7 +257,14 @@
         $("#nav .nav-wrap").scrollLeft(0);
       }
       $('.all-tab-content .__item').eq(tabIndex).addClass('tab-this').siblings().removeClass('tab-this')
-
+      var lis =  $('.news-content .news-wrap').eq(tabIndex).find('.news-list')
+      $.each(lis, function(key, item){
+        // newsContentHeight += item.height
+        console.log(item.offsetHeight)
+        newsContentHeight += item.offsetHeight
+      })
+      $('.news-content').height(newsContentHeight)
+      $(window).scrollTop(0)
     }
     // 点击nav切换content
     $('.nav-wrap .__nav-item').click(function(){
@@ -254,6 +287,13 @@
       $('.fix').addClass('hide')
       $('.all-tab-content').css('margin-top','0rem')
       $('.all-tab-content').height('0rem')
+    })
+    // 关闭
+    $('.fix').on('click',function(){
+      if(!$('.search-bar').hasClass('hide')){
+        $('.search-bar').addClass('hide')
+         $('.fix').addClass('hide')
+      }
     })
     // 选择弹窗tab标签
     $('.all-tab-content .__item').on('click',function(){
@@ -287,14 +327,12 @@
       // var bannerTop = $('#banner').offset().top + 72
       var newsTop = $('.news-content').offset().top
       if(flag && top>newsTop - navHeight) {
-        console.log('aaa') 
         if(!$('.cq-page').hasClass('nav-flex')){
         $('.cq-page').addClass('nav-flex')
         }
         flag = !flag;
       }
       if(!flag && top<newsTop - navHeight){
-        console.log('bbbb')
         if($('.cq-page').hasClass('nav-flex')){
           $('.cq-page').removeClass('nav-flex')
         }
