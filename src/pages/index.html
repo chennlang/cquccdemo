@@ -3,7 +3,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta content="yes" name="apple-mobile-web-app-capable">
-		<meta name="format-detection" content="telephone=no,email=no">
+    <meta name="format-detection" content="telephone=no,email=no">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../static/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="../static/css/cqucc.css"/>
@@ -76,7 +76,8 @@
           <li class="__nav-item">其他下载</li>
           <span id="showAllTab" class="__show-all"><img class="ui-img" src="../static/images/show-more.png" alt=""> </span>
 				</ul>
-			</div>
+      </div>
+      <div class="news-main">
 			<div class="news-content">
         <!-- cont1 -->
 				<ul class="news-wrap">
@@ -163,6 +164,7 @@
         <ul class="news-wrap">11113232111</ul>
         <ul class="news-wrap">1111111</ul>
       </div>
+    </div>
       <div class="links">
         <h3 class="__title">友情链接</h3>
         <ul class="link-block">
@@ -248,6 +250,7 @@
       var translate3d = 'translate3d('+TX+'%,0px,0px)';
       var itemWidth = $('#nav .nav-wrap .__nav-item').first().width()
       var newsContentHeight = 0
+      var newsListNum = 0
       $('.fix').addClass('hide')
       $('.nav-wrap .__nav-item').eq(tabIndex).addClass('active-nav').siblings().removeClass('active-nav');
       $('.news-content').css({'transform':translate3d});
@@ -260,11 +263,11 @@
       var lis =  $('.news-content .news-wrap').eq(tabIndex).find('.news-list')
       $.each(lis, function(key, item){
         // newsContentHeight += item.height
-        console.log(item.offsetHeight)
+        newsListNum = key;
         newsContentHeight += item.offsetHeight
       })
-      $('.news-content').height(newsContentHeight)
-      $(window).scrollTop(0)
+      $('.news-content').height(newsContentHeight + 10*newsListNum)
+      $('.cq-page').scrollTop(0)
     }
     // 点击nav切换content
     $('.nav-wrap .__nav-item').click(function(){
@@ -320,7 +323,7 @@
     })
     // 滚动浮动nav
     var flag = true
-    $(window).scroll(function(){
+    $('.cq-page').scroll(function(){
       var top = $(document).scrollTop();
       var headHeight = $('.header').height()
       var navHeight = $('#nav').height() + headHeight + 2

@@ -10,6 +10,14 @@ html {
   background: #eee;
 }
 
+body,
+.cq-page {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .nav-flex #nav {
   position: fixed !important;
   margin-top: 1.386667rem;
@@ -33,14 +41,14 @@ html {
   height: 1.386667rem;
   background-color: #1682EB;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cq-page .header .logo {
   width: 3.946667rem;
-  height: 0.96rem;
-  display: block;
-  margin: auto;
-  margin-top: 0.266667rem;
+  height: 0.826667rem;
 }
 
 .cq-page .header .logo .__img {
@@ -129,6 +137,13 @@ html {
   color: #1682EB;
 }
 
+.cq-page .news-main {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .cq-page .news-content {
   width: 100%;
   white-space: nowrap;
@@ -151,6 +166,7 @@ html {
   background-color: #FFFFFF;
   white-space: normal;
   overflow: auto;
+  line-height: 0.693333rem;
 }
 
 .cq-page .news-content .news-wrap .news-list:not(:first-child) {
@@ -312,7 +328,7 @@ html {
   z-index: 998;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .cq-page .all-tab-content {
