@@ -244,7 +244,7 @@
   <script>
     var tabIndex = 0;
     var renderNavStyle = function(type){
-      var TX = -tabIndex*100
+      var TX = -tabIndex*100 - tabIndex*1
       var type = type || 0;
       var translateX = 'translateX(-'+TX+'%)';
       var translate3d = 'translate3d('+TX+'%,0px,0px)';
@@ -257,7 +257,7 @@
       if(type===1 && tabIndex>=4){
         $("#nav .nav-wrap").scrollLeft((tabIndex-2)*itemWidth);
       }else{
-        $("#nav .nav-wrap").scrollLeft(0);
+//      $("#nav .nav-wrap").scrollLeft(0);
       }
       $('.all-tab-content .__item').eq(tabIndex).addClass('tab-this').siblings().removeClass('tab-this')
       var lis =  $('.news-content .news-wrap').eq(tabIndex).find('.news-list')
@@ -269,6 +269,7 @@
       $('.news-content').height(newsContentHeight + 10*newsListNum)
       $('.cq-page').scrollTop(0)
     }
+    renderNavStyle();
     // 点击nav切换content
     $('.nav-wrap .__nav-item').click(function(){
       var index = $(this).index();

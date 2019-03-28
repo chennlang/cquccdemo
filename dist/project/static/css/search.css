@@ -30,6 +30,44 @@ body,
 .cq-page {
   width: 100%;
   height: 100%;
+  background-color: #ffffff;
+  padding-top: 1.386667rem;
+  box-sizing: border-box;
+}
+
+.cq-page .search-content {
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+}
+
+.cq-page .search-content .wrap .item {
+  position: relative;
+  width: 100%;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: 0.4rem;
+  padding-right: 0.213333rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cq-page .search-content .wrap .item .next-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0.16rem;
+  height: 0.32rem;
+  margin-top: -0.16rem;
+}
+
+.cq-page .search-content .wrap .item .next-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.cq-page .search-content .wrap .item:not(:last-child) {
+  border-bottom: 0.013333rem solid #F4F5F7;
 }
 
 .cq-page .search-bar {
@@ -62,6 +100,7 @@ body,
   display: inline-block;
   width: 7rem;
   height: 1.066667rem;
+  position: relative;
 }
 
 .cq-page .search-bar .__input .icon-input {
