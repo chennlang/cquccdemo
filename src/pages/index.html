@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="../static/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="../static/css/cqucc.css"/>
-    <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/swiper.min.css">
 		<title>重庆大学党委教师工作部</title>
 	</head>
   <style type="text/css">
@@ -17,31 +17,6 @@
 	</style>
 	<body>
 		<div class="cq-page">
-      <!-- <div class="r-side">
-        <div class="logo">
-          <img src="../static/images/logo.jpg" alt="logo">
-        </div>
-        <div class="main-emun">
-          <ul class="main-emun-wrap">
-            <li class="__list">
-                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
-                11111111
-            </li>            
-            <li class="__list">
-                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
-                222222
-            </li>            
-            <li class="__list">
-                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
-                333333
-            </li>            
-            <li class="__list">
-                <span class="__icon"><img src="../static/images/home.png" alt="home"> </span>
-                444444
-            </li>            
-          </ul>
-        </div>
-      </div> -->
 			<div class="header">
 				<span class="logo">
 					<img class="__img" src="../static/images/logo.png" alt="logo">
@@ -51,7 +26,15 @@
 				</span>
       </div>
 			<div class="banner" id="banner">
-				
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
 			</div>
 			<div class="nav" id="nav">
 				<ul class="nav-wrap">
@@ -98,13 +81,15 @@
                 <span class="creat-time">2018.02.10</span>
               </p>
             </div>
-            <div class="__rt"></div>
+            <div class="__rt">
+              <img src="../static/images/base-img.png" alt="base-img">
+            </div>
           </li>
           <!-- 视频 -->
           <li class="news-list __video-news">
             <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动</h3>
             <div class="__video-img">
-              <img class="ui-video-img" src="" alt="">
+              <img class="ui-video-img" src="../static/images/base-img.png" alt="base-img">
               <div class="ui-paly">
                 <img  src="../static/images/video-play.png" alt="play">
               </div>
@@ -114,7 +99,7 @@
            <li class="news-list __video-news">
               <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动</h3>
               <div class="__video-img">
-                <img class="ui-video-img" src="" alt="">
+                <img class="ui-video-img" src="../static/images/base-img.png" alt="base-img">
                 <div class="ui-paly">
                   <img  src="../static/images/video-play.png" alt="play">
                 </div>
@@ -168,11 +153,11 @@
       <div class="links">
         <h3 class="__title">友情链接</h3>
         <ul class="link-block">
-          <li class="link-item">虎溪首页</li>
-          <li class="link-item">人事处</li>
-          <li class="link-item">教务处</li>
-          <li class="link-item">纪委办</li>
-          <li class="link-item">学工部</li>
+            <li class="link-item"> <a href="http://huxi.cqu.edu.cn/">虎溪首页</a> </li>
+            <li class="link-item"> <a href="http://rsc.cqu.edu.cn/">人事处</a> </li>
+            <li class="link-item"> <a href="http://zhaosheng.cqu.edu.cn/">教务处</a> </li>
+            <li class="link-item"> <a href="http://jw.cqu.edu.cn/">纪委办</a> </li>
+            <li class="link-item"> <a href="http://xsc.cqu.edu.cn/">学工部</a> </li>
         </ul>
       </div>
       <div class="QR-code">
@@ -241,6 +226,8 @@
     </div>
 	</body>
   <script src="../static/js/flex.js"></script>
+  <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+  <script src="../static/js/swiper.min.js"></script>
   <script>
     var tabIndex = 0;
     var renderNavStyle = function(type){
@@ -275,10 +262,6 @@
       var index = $(this).index();
       tabIndex = index;
       renderNavStyle();
-      // var TX = index*100
-      // var translateX = 'translateX(-'+TX+'%)';
-      // $(this).addClass('active-nav').siblings().removeClass('active-nav');
-      // $('.news-content').css({'transform': translateX});
     });
     // 显示所有标签
     $('#showAllTab').on('click',function(){
@@ -304,19 +287,15 @@
       var index = $(this).index()
       tabIndex = index;
       renderNavStyle(1);
-      // var itemWidth = $('#nav .nav-wrap .__nav-item').first().width()
-      // console.log(index*itemWidth)
-      // $("#nav .nav-wrap").scrollLeft(index*itemWidth);
-      // $(this).addClass('tab-this').siblings().removeClass('tab-this')
       $('.all-tab-content').css('margin-top','0rem')
       $('.all-tab-content').height('0rem')
     })
     // 搜索
-    $('#search-btn').on('click',function(){
-      $('.search-bar').removeClass('hide')
-      $('.fix').removeClass('hide')
-      $('.search-bar .__input input[type=search]').focus()
-    })
+    // $('#search-btn').on('click',function(){
+    //   $('.search-bar').removeClass('hide')
+    //   $('.fix').removeClass('hide')
+    //   $('.search-bar .__input input[type=search]').focus()
+    // })
     // 关闭搜索
     $('.search-bar .__go-back').on('click', function(){
       $('.search-bar').addClass('hide')
@@ -344,4 +323,14 @@
       }
     })
   </script>
+  <script>        
+    var mySwiper = new Swiper ('.swiper-container', {
+      loop: true, // 循环模式选项
+      autoplay: true,
+      // 如果需要分页器
+      pagination: {
+        el: '.swiper-pagination',
+      },   
+    })        
+    </script>
 </html>
