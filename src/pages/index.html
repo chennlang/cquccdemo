@@ -241,11 +241,13 @@
       $('.fix').addClass('hide')
       $('.nav-wrap .__nav-item').eq(tabIndex).addClass('active-nav').siblings().removeClass('active-nav');
       $('.news-content').css({'transform':translate3d});
-      if(type===1 && tabIndex>=4){
-        $("#nav .nav-wrap").scrollLeft((tabIndex-2)*itemWidth);
-      }else{
-//      $("#nav .nav-wrap").scrollLeft(0);
-      }
+      type===1 && tabIndex>=4 ? $("#nav .nav-wrap").scrollLeft((tabIndex-2)*itemWidth) : ''
+      type===1 && tabIndex<4 ? $("#nav .nav-wrap").scrollLeft(0) : ''
+//       if(type===1 && tabIndex>=4){
+//         $("#nav .nav-wrap").scrollLeft((tabIndex-2)*itemWidth);
+//       }else{
+// //      $("#nav .nav-wrap").scrollLeft(0);
+//       }
       $('.all-tab-content .__item').eq(tabIndex).addClass('tab-this').siblings().removeClass('tab-this')
       var lis =  $('.news-content .news-wrap').eq(tabIndex).find('.news-list')
       $.each(lis, function(key, item){
