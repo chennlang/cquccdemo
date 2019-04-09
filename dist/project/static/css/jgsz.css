@@ -57,6 +57,22 @@ body,
   background: #fff;
 }
 
+.cq-page .content .__title {
+  font-size: 0.426667rem;
+  line-height: 1.066667rem;
+}
+
+.cq-page .content .jgsz-table {
+  font-size: 0.32rem;
+}
+
+.cq-page .content .__paragraph {
+  text-indent: 2em;
+  font-size: 0.4rem;
+  line-height: 0.613333rem;
+  color: #333333;
+}
+
 .cq-page .footer {
   padding: 0.533333rem 0;
   width: 100%;

@@ -20,10 +20,10 @@
     <div class="cq-page">
         <div class="header">
             <span class="go-back"> <img src="../../static/images/goBack.png" alt="goback"></span>
-            新闻详情
+            机构设置
           </div>
         <div class="content">
-            <h3>组织架构:</h3>
+            <h3 class="__title">组织架构:</h3>
             <table border="1" class="jgsz-table">
                 <thead>
                     <th>部门</th>
@@ -59,7 +59,14 @@
                     </tr>
                 </tbody>
             </table>
-            <h3>部门介绍:</h3>
+            <h3 class="__title">部门介绍:</h3>
+						<p class="__paragraph">重庆大学党委教师工作部于2017年11月30日成立，正处级建制，与党委宣传部合署办公，设部长1名（由宣传部部长兼任），专职副部长1名，是学校党委领导下的主管教师思想政治工作和师德师风建设的职能部门。下设师德师风建设办公室，专职开展教师师德师风建设工作。</p>
+						<h3 class="__title">工作职责:</h3>
+						<p class="__paragraph">1、党委教师工作部主要职责是强化全校教师思想政治教育；会同有关部门，做好教师党建工作，配合做好统一战线工作；做好师德师风建设规划、考评及教育，做好有关奖励及荣誉称号的评选、表彰和宣传。</p>
+						<p class="__paragraph">2. 负责牵头贯彻落实中央和国家、学校党委关于高校教师思想政治工作的决策和部署，制定相关工作规划，开展全校教师的思想政治教育工作，不断提升学校教师思想政治素质。</p>
+						<p class="__paragraph">3. 负责牵头协调教学科研单位对新入职教师的思想政治、品德学风进行综合考察和把关，开展新入职教师的入职教育、校史校情教育。</p>
+						<p class="__paragraph">4. 师德师风建设办公室负责全校教师思想政治教育计划的制定、教育活动的组织开展与指导；师德师风建设规划、考评体系的完善；师德师风及学术道德问题的监督与受理；教师思想动态调研等。</p>
+						<p class="__paragraph">5. 完成学校交办的其他相关工作。</p>
         </div>
         <div class="footer">
             <p>重庆大学 版权所有2012</p>
@@ -69,5 +76,9 @@
     </div>
 </body>
 <script src="../../static/js/flex.js"></script>
-
+<script>
+	$('.go-back').on('click', function(){
+        location.history.go(-1)
+    })
+</script>
 </html>
