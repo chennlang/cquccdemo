@@ -133,10 +133,46 @@
             </p>
           </li>
         </ul>
-        <ul class="news-wrap">222</ul>
-        <ul class="news-wrap">111323231111</ul>
-        <ul class="news-wrap">1111111</ul>
-        <ul class="news-wrap">113232311111</ul>
+        <ul class="news-wrap">
+          <!-- 文字 -->
+					<li class="news-list __text-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动——川剧工作坊折子戏专场演出 </h3>
+            <p class="__info">
+              <span class="view-nums">2次观看</span>
+              <span class="creat-time">2018.02.10</span>
+            </p>
+          </li>
+        </ul>
+        <ul class="news-wrap">
+          <!-- 文字 -->
+					<li class="news-list __text-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动——川剧工作坊折子戏专场演出 </h3>
+            <p class="__info">
+              <span class="view-nums">2次观看</span>
+              <span class="creat-time">2018.02.10</span>
+            </p>
+          </li>
+        </ul>
+        <ul class="news-wrap">
+          <!-- 文字 -->
+					<li class="news-list __text-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动——川剧工作坊折子戏专场演出 </h3>
+            <p class="__info">
+              <span class="view-nums">2次观看</span>
+              <span class="creat-time">2018.02.10</span>
+            </p>
+          </li>
+        </ul>
+        <ul class="news-wrap">
+          <!-- 文字 -->
+					<li class="news-list __text-news">
+            <h3 class="__title">活动——川剧工作坊折子戏专场演出 为学校90周年校庆年献活动——川剧工作坊折子戏专场演出 </h3>
+            <p class="__info">
+              <span class="view-nums">2次观看</span>
+              <span class="creat-time">2018.02.10</span>
+            </p>
+          </li>
+        </ul>
         <ul class="news-wrap">1111111</ul>
         <ul class="news-wrap">11123232321111</ul>
         <ul class="news-wrap">1113221111</ul>
@@ -229,7 +265,8 @@
   <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
   <script src="../static/js/swiper.min.js"></script>
   <script>
-    var tabIndex = 0;
+    var tabIndex = getParms('tabIndex') || 0;
+    console.log(tabIndex, 'sss')
     var renderNavStyle = function(type){
       var TX = -tabIndex*100 - tabIndex*1
       var type = type || 0;
@@ -258,7 +295,19 @@
       $('.news-content').height(newsContentHeight + 10*newsListNum)
       $('.cq-page').scrollTop(0)
     }
-    renderNavStyle();
+    renderNavStyle(1);
+    // get - url参数
+    function getParms (name) {
+      var url = location.search.toString()
+      var regStr = '' + name + '=([^&]+)'
+      var reg = new RegExp(regStr, 'g')
+      var v = ''
+      try{
+        v = url.match(reg)[0].split('=')[1]
+      }catch (e) {
+      }
+      return v ? v : false
+    }
     // 点击nav切换content
     $('.nav-wrap .__nav-item').click(function(){
       var index = $(this).index();
@@ -292,12 +341,6 @@
       $('.all-tab-content').css('margin-top','0rem')
       $('.all-tab-content').height('0rem')
     })
-    // 搜索
-    // $('#search-btn').on('click',function(){
-    //   $('.search-bar').removeClass('hide')
-    //   $('.fix').removeClass('hide')
-    //   $('.search-bar .__input input[type=search]').focus()
-    // })
     // 关闭搜索
     $('.search-bar .__go-back').on('click', function(){
       $('.search-bar').addClass('hide')
